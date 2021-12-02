@@ -110,7 +110,7 @@ services:
     ports:
       - 8081
     volumes:
-      - ./grafana/config.json:/usr/src/app/config.json
+      - ./grafana/renderer/:/usr/src/app/
 
   loki:
     image: grafana/loki:latest
