@@ -152,7 +152,8 @@ services:
 
   otel_collector:
       networks:
-        - backend
+        - back-tier
+        - front-tier
       image: otel/opentelemetry-collector-contrib:latest
       volumes:
         - "./otel/:/etc/otelcol/"
