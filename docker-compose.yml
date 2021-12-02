@@ -105,6 +105,13 @@ services:
       - front-tier
     restart: always
 
+  renderer:
+    image: grafana/grafana-image-renderer:latest
+    ports:
+      - 8081
+    volumes:
+      - ./grafana/config.json:/usr/src/app/config.json
+
   loki:
     image: grafana/loki:latest
     ports:
