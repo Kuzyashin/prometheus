@@ -130,8 +130,8 @@ services:
     volumes:
       - /var/log:/var/log
       - /var/lib/docker/containers:/var/lib/docker/containers
-      - ./promtail/:/etc/promtail-config/
-    command: -config.file=/etc/promtail-config/promtail.yml
+      - ./promtail/:/etc/promtail/
+    command: -config.file=/etc/promtail/promtail.yml
     networks:
       - back-tier
       - front-tier
