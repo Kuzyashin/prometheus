@@ -109,8 +109,6 @@ services:
     image: grafana/grafana-image-renderer:latest
     ports:
       - 8081
-    volumes:
-      - ./grafana/renderer/:/usr/src/app/
 
   loki:
     image: grafana/loki:latest
@@ -131,7 +129,7 @@ services:
       - /var/log:/var/log
       - /var/lib/docker/containers:/var/lib/docker/containers
       - ./promtail/:/etc/promtail/
-    command: -config.file=/etc/promtail/promtail.yml
+    command: -config.file=/etc/promtail/promtail.yaml
     networks:
       - back-tier
       - front-tier
