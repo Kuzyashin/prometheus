@@ -24,7 +24,7 @@ services:
     ports:
       - 9090:9090
     links:
-      - cadvisor:cadvisor
+#      - cadvisor:cadvisor
       - alertmanager:alertmanager
 #      - pushgateway:pushgateway
     depends_on:
